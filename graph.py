@@ -16,7 +16,7 @@ schema_tool = SchemaTool(engine=engine)
 
 agent_node = agent_node = AgentNode(llm_client=LLMClient())
 
-
+#Build the graph nodes
 def agent_build_node(state: AgentState) -> dict:
     return agent_node.build_query(state, state["user_input"])
 
